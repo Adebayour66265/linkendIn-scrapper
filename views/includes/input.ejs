@@ -1,0 +1,59 @@
+<main>
+  <section class="form-section text-center mb-5">
+    <h1 class="page-title">web scraping site</h1>
+    <form class="form" action="/webApi" method="POST">
+      <input
+        class="input"
+        type="text"
+        placeholder="Type your URL here ...."
+        required
+        name="skill"
+        autofocus
+      />
+      <button type="button" value="Send" class="button btn btn-primary btn-sm">
+        Send
+      </button>
+      <!-- <input type="button" value="Send" class="button btn btn-primary btn-sm" /> -->
+    </form>
+    <!-- <div class="get-result"></div> -->
+  </section>
+  <!-- <script>
+    const form = document.querySelector(".form");
+    const result = document.querySelector(".get-result");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const input = document.querySelector(".skill-input");
+      fetch("/indeed", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          skill: input.value,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw Error(response.statusText);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          //console.log the response
+          console.log(data);
+
+          result.insertAdjacentHTML(
+            "afterbegin",
+            `
+      <div class="get-result">
+        <a target="_blank" class="short-url" href="/getData">
+          get data
+        </a>
+      </div>
+    `
+          );
+        });
+    });
+  </script> -->
+</main>

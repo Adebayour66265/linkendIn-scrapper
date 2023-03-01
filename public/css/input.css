@@ -1,0 +1,52 @@
+.form-section {
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: blue;
+}
+.form-section .input {
+  width: 50%;
+  height: 40px;
+  justify-content: center;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px solid coral;
+}
+.form-section .button {
+  background: rgb(47, 104, 161);
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  /* border-radius: 0.5rem; */
+  text-align: center;
+}
+.input-text {
+  background-color: coral;
+  color: #fff;
+  padding: 1rem;
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+}
+.download-btn {
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+}
+.download-btn a {
+  background: rgb(47, 104, 161);
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #fff;
+  /* text-transform: uppercase; */
+  border-radius: 0.5rem;
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+<%- include('includes/head') %>
+<link rel="stylesheet" href="./css/input.css">
+<link rel="stylesheet" href="./css/notification.css">
+<script src="./js/glightbox.min.js" defer></script>
+<script src="./js/main.js" defer></script>
+<script src="./js/wow.min.js" defer></script>
+<script src="./js/notification.js" defer></script>
+<title>NUMBERS SCRAPING SITE</title>
+</head>
+<body>
+<%- include('includes/header') %>
+<main>
+
+    
+ <%- include('includes/imgUrl') %>
+
+
+ <div class="download-btn">
+    <a href="/scrapData/Numbers.txt"  download="">Download</a>
+ </div>
+
+
+ <div class="container input-text">
+    <!-- <h1>website url</h1> -->
+    <p class="siteUrl">
+       <a href=" <%= siteUrl  %>"> <% if (siteUrl != '') {%> 
+         <%= siteUrl  %>
+     
+                 <% } %> </a>
+    </p>
+
+
+    <!-- <h1>user email</h1> -->
+
+    <p class="value">
+        <% if (value != '') {%> 
+    <%= value  %>    
+            <% } %> 
+    </p>
+ </div>
+
+
+
+ 
+</main>
+
+
+<div id="toastBox">
+
+</div>
+<%- include('includes/footer') %>
+</body>
+</html>

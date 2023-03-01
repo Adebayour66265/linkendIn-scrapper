@@ -13,13 +13,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', homeRoute);
 app.use('/api', getRoutes);
 
-app.use(express.urlencoded({ extended: true }));
 
+
+
+// const cherio = require('cherio');
+
+// const request = require('request');
+
+// const fs = require('fs');
 // VIEW ENGINE
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static('public'));
 
 const PORT = 3000;
 app.listen(PORT, () => {
