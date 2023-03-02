@@ -66,7 +66,7 @@ router.post('/webApi', urlencodedParser, async (req, res) => {
 
 
                 value = $('a').each((index, userEmail) => {
-                    var email = $(userEmail).attr('href').replace('mailto:', '');
+                    var email = $(userEmail).attr('href') || $(userEmail).attr('href').replace('mailto:', '');
                     // var baseUrl = siteUrl
                     var Links = siteUrl + email;
 
@@ -87,8 +87,6 @@ router.post('/webApi', urlencodedParser, async (req, res) => {
 
     })();
     await res.render('scrapper', { value: value, siteUrl: siteUrl });
-
-
     // res.json({ value: value, siteUrl: siteUrl });
     // res.json(JSON.parse(siteUrl));
 
@@ -138,9 +136,9 @@ router.post('/numb', urlencodedParser, async (req, res) => {
 
             const $ = cherio.load(html);
 
-           
+
             writeStream.write(Links);
-                writeStream.write("\n")
+            writeStream.write("\n")
         } else {
             console.log("Request Failed");
         }
