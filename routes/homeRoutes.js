@@ -66,7 +66,8 @@ router.post('/webApi', urlencodedParser, async (req, res) => {
 
 
                 value = $('a').each((index, userEmail) => {
-                    var email = $(userEmail).attr('href') || $(userEmail).attr('href').replace('mailto:', '');
+                    // var email = $(userEmail).attr('href').includes('mailto:') ?$(userEmail).attr('href').replace('mailto:', ''):$(userEmail).attr('href');
+                    var email = $(userEmail).attr('href');
                     // var baseUrl = siteUrl
                     var Links = siteUrl + email;
 
